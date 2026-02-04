@@ -12,10 +12,28 @@
 //   print(myFunc(66, 20));
 //   print(myFunc(61, 20));
 // }
-void main() {
-  String greetings() {
-    return "Wellcome";
-  }
+// void main() {
+//   String greetings() {
+//     return "Wellcome";
+//   }
 
-  print(greetings());
+//   print(greetings());
+// }
+// void main() {
+//   void number(int n) {
+//     if (n % 2 == 0) {
+//       print("this is even");
+//     } else {
+//       print("this is odd");
+//     }
+//   }
+
+//   number(21);
+// }
+// check index item
+void main() {
+  var list = ["aaa", "bbb", "ccc"];
+  list.forEach((item) {
+    print('${list.indexOf(item)}:$item');
+  });
 }
