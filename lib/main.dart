@@ -31,9 +31,17 @@
 //   number(21);
 // }
 // check index item
+// void main() {
+//   var list = ["aaa", "bbb", "ccc"];
+//   list.forEach((item) {
+//     print('${list.indexOf(item)}:$item');
+//   });
+// }
 void main() {
-  var list = ["aaa", "bbb", "ccc"];
-  list.forEach((item) {
-    print('${list.indexOf(item)}:$item');
-  });
+  int multi(int a, int b) {
+    int c = a * b;
+    return c;
+  }
+
+  print("result = ${multi(10, 10)}");
 }
