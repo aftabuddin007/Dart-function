@@ -45,16 +45,32 @@
 
 //   print("result = ${multi(10, 10)}");
 // }
-int factorial(int num) {
-  if (num <= 1) {
-    return 1;
-  } else {
-    return num * factorial(num - 1);
+// int factorial(int num) {
+//   if (num <= 1) {
+//     return 1;
+//   } else {
+//     return num * factorial(num - 1);
+//   }
+// }
+
+// void main() {
+//   var num = 6;
+//   var fact = factorial(num);
+//   print(fact);
+// }
+int findMax(List<int> num) {
+  if (num.isEmpty) {
+    print("the list can't be empty");
   }
+  int max = num[0];
+  for (var n in num) {
+    if (n > max) {
+      max = n;
+    }
+  }
+  return max;
 }
 
 void main() {
-  var num = 6;
-  var fact = factorial(num);
-  print(fact);
+  print(findMax([2, 3, 4, 56, 12, 444, 32]));
 }
