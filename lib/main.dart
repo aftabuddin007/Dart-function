@@ -37,11 +37,24 @@
 //     print('${list.indexOf(item)}:$item');
 //   });
 // }
-void main() {
-  int multi(int a, int b) {
-    int c = a * b;
-    return c;
-  }
+// void main() {
+//   int multi(int a, int b) {
+//     int c = a * b;
+//     return c;
+//   }
 
-  print("result = ${multi(10, 10)}");
+//   print("result = ${multi(10, 10)}");
+// }
+int factorial(int num) {
+  if (num <= 1) {
+    return 1;
+  } else {
+    return num * factorial(num - 1);
+  }
+}
+
+void main() {
+  var num = 6;
+  var fact = factorial(num);
+  print(fact);
 }
