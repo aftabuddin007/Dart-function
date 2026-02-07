@@ -58,19 +58,28 @@
 //   var fact = factorial(num);
 //   print(fact);
 // }
-int findMax(List<int> num) {
-  if (num.isEmpty) {
-    print("the list can't be empty");
-  }
-  int max = num[0];
-  for (var n in num) {
-    if (n > max) {
-      max = n;
-    }
-  }
-  return max;
+// int findMax(List<int> num) {
+//   if (num.isEmpty) {
+//     print("the list can't be empty");
+//   }
+//   int max = num[0];
+//   for (var n in num) {
+//     if (n > max) {
+//       max = n;
+//     }
+//   }
+//   return max;
+// }
+
+// void main() {
+//   print(findMax([2, 3, 4, 56, 12, 444, 32]));
+// }
+double calculateTotal(double price, {double tax = 0.15}) {
+  return price + (price * tax);
 }
 
 void main() {
-  print(findMax([2, 3, 4, 56, 12, 444, 32]));
+  print(calculateTotal(1000));
+  print(calculateTotal(2000, tax: 0.1));
+
 }
