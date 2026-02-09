@@ -25,20 +25,47 @@
 //     Person p = Person("Aftab");
 //     p.sayHello();
 //   }
-class Vehicle {
-  void move() {
-    print("the vehicle is moving");
-  }
-}
+// class Vehicle {
+//   void move() {
+//     print("the vehicle is moving");
+//   }
+// }
 
-class Car extends Vehicle {
-  void honk() {
-    print("car honk: beep beep!");
+// class Car extends Vehicle {
+//   void honk() {
+//     print("car honk: beep beep!");
+//   }
+// }
+
+// void main() {
+//   Car myCar = Car();
+//   myCar.honk();
+//   myCar.move();
+// }
+class BankAccount {
+  double _balance = 0;
+  void deposit(double amount) {
+    _balance += amount;
+  }
+
+  void withdraw(double amount) {
+    if (_balance >= amount) {
+      _balance -= amount;
+    } else {
+      print("Empty account");
+    }
+  }
+
+  double getBalance() {
+    return _balance;
   }
 }
 
 void main() {
-  Car myCar = Car();
-  myCar.honk();
-  myCar.move();
+  var account = BankAccount();
+  account.deposit(1000);
+  print("current Balance = ${account.getBalance()}");
+  account.withdraw(400);
+  print("remaining  Balance = ${account.getBalance()}");
+
 }
