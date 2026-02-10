@@ -42,30 +42,47 @@
 //   myCar.honk();
 //   myCar.move();
 // }
-class BankAccount {
-  double _balance = 0;
-  void deposit(double amount) {
-    _balance += amount;
-  }
+// class BankAccount {
+//   double _balance = 0;
+//   void deposit(double amount) {
+//     _balance += amount;
+//   }
 
-  void withdraw(double amount) {
-    if (_balance >= amount) {
-      _balance -= amount;
-    } else {
-      print("Empty account");
-    }
-  }
+//   void withdraw(double amount) {
+//     if (_balance >= amount) {
+//       _balance -= amount;
+//     } else {
+//       print("Empty account");
+//     }
+//   }
 
-  double getBalance() {
-    return _balance;
+//   double getBalance() {
+//     return _balance;
+//   }
+// }
+
+// void main() {
+//   var account = BankAccount();
+//   account.deposit(1000);
+//   print("current Balance = ${account.getBalance()}");
+//   account.withdraw(400);
+//   print("remaining  Balance = ${account.getBalance()}");
+
+// }
+class Animal {
+  void speak() {
+    print("Animal speak");
+  }
+}
+
+class Dog extends Animal {
+  @override
+  void speak() {
+    print("Dog barks");
   }
 }
 
 void main() {
-  var account = BankAccount();
-  account.deposit(1000);
-  print("current Balance = ${account.getBalance()}");
-  account.withdraw(400);
-  print("remaining  Balance = ${account.getBalance()}");
-
+  var dog = Dog();
+  dog.speak();
 }
