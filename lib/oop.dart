@@ -69,20 +69,47 @@
 //   print("remaining  Balance = ${account.getBalance()}");
 
 // }
-class Animal {
-  void speak() {
-    print("Animal speak");
+// inheritance
+// class Animal {
+//   void speak() {
+//     print("Animal speak");
+//   }
+// }
+
+// class Dog extends Animal {
+//   @override
+//   void speak() {
+//     print("Dog barks");
+//   }
+// }
+
+// void main() {
+//   var dog = Dog();
+//   dog.speak();
+// }
+class Playing {
+  void play() {
+    print("I love hocky");
   }
 }
 
-class Dog extends Animal {
+class Football extends Playing {
   @override
-  void speak() {
-    print("Dog barks");
+  void play() {
+    print("I love football");
+  }
+}
+
+class Cricket extends Playing {
+  @override
+  void play() {
+    print("I love cricket");
   }
 }
 
 void main() {
-  var dog = Dog();
-  dog.speak();
+  Playing cricket = Cricket();
+  Playing football = Football();
+  cricket.play();
+  football.play();
 }
