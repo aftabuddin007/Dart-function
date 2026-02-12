@@ -87,29 +87,48 @@
 //   var dog = Dog();
 //   dog.speak();
 // }
-class Playing {
-  void play() {
-    print("I love hocky");
+// polymorphism
+// class Playing {
+//   void play() {
+//     print("I love hocky");
+//   }
+// }
+
+// class Football extends Playing {
+//   @override
+//   void play() {
+//     print("I love football");
+//   }
+// }
+
+// class Cricket extends Playing {
+//   @override
+//   void play() {
+//     print("I love cricket");
+//   }
+// }
+
+// void main() {
+//   Playing cricket = Cricket();
+//   Playing football = Football();
+//   cricket.play();
+//   football.play();
+// }
+// single inheritance
+class Animal {
+  void eat() {
+    print("cow is eating");
   }
 }
 
-class Football extends Playing {
-  @override
-  void play() {
-    print("I love football");
-  }
-}
-
-class Cricket extends Playing {
-  @override
-  void play() {
-    print("I love cricket");
+class Dog extends Animal {
+  void brak() {
+    print("dog is braking");
   }
 }
 
 void main() {
-  Playing cricket = Cricket();
-  Playing football = Football();
-  cricket.play();
-  football.play();
+  var dog = Dog();
+  dog.eat();
+  dog.brak();
 }
