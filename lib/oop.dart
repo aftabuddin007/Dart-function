@@ -115,20 +115,50 @@
 //   football.play();
 // }
 // single inheritance
+// class Animal {
+//   void eat() {
+//     print("cow is eating");
+//   }
+// }
+
+// class Dog extends Animal {
+//   void brak() {
+//     print("dog is braking");
+//   }
+// }
+
+// void main() {
+//   var dog = Dog();
+//   dog.eat();
+//   dog.brak();
+// }
 class Animal {
   void eat() {
-    print("cow is eating");
+    print('Animal is eating.');
   }
 }
 
 class Dog extends Animal {
-  void brak() {
-    print("dog is braking");
+  void bark() {
+    print('Dog is barking.');
+  }
+}
+
+class Cat extends Animal {
+  void meow() {
+    print('Cat is meowing.');
   }
 }
 
 void main() {
   var dog = Dog();
-  dog.eat();
-  dog.brak();
+  dog.eat();  
+  dog.bark(); 
+
+  var cat = Cat();
+  cat.eat();  
+  cat.meow(); 
 }
+
+
+
