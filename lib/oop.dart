@@ -132,32 +132,57 @@
 //   dog.eat();
 //   dog.brak();
 // }
-class Animal {
-  void eat() {
-    print('Animal is eating.');
-  }
-}
+// class Animal {
+//   void eat() {
+//     print('Animal is eating.');
+//   }
+// }
 
-class Dog extends Animal {
-  void bark() {
-    print('Dog is barking.');
-  }
-}
+// class Dog extends Animal {
+//   void bark() {
+//     print('Dog is barking.');
+//   }
+// }
 
-class Cat extends Animal {
-  void meow() {
-    print('Cat is meowing.');
+// class Cat extends Animal {
+//   void meow() {
+//     print('Cat is meowing.');
+//   }
+// }
+
+// void main() {
+//   var dog = Dog();
+//   dog.eat();  
+//   dog.bark(); 
+
+//   var cat = Cat();
+//   cat.eat();  
+//   cat.meow(); 
+// }
+class Employee {
+  String _name;
+  double _salary;
+
+  Employee(this._name, this._salary);
+
+  // Public method to get employee details
+  String getDetails() {
+    return 'Name: $_name, Salary: $_salary';
   }
+
+  // Private method to calculate bonus
+  double _calculateBonus() {
+    return _salary * 0.1;
+  }
+
+  // Public method to get bonus
+  double get bonus => _calculateBonus();
 }
 
 void main() {
-  var dog = Dog();
-  dog.eat();  
-  dog.bark(); 
-
-  var cat = Cat();
-  cat.eat();  
-  cat.meow(); 
+  var employee = Employee('Alice', 50000);
+  print(employee.getDetails()); // Output: Name: Alice, Salary: 50000
+  print(employee.bonus); // Output: 5000.0
 }
 
 
